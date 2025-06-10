@@ -1,0 +1,151 @@
+.influencer-analysis {
+  padding: 24px;
+}
+
+.influencer-analysis .page-header {
+  margin-bottom: 24px;
+}
+
+.influencer-analysis .page-header h2 {
+  margin-bottom: 8px;
+}
+
+.influencer-analysis .ant-tabs-nav {
+  margin-bottom: 24px;
+}
+
+.influencer-analysis .ant-table-wrapper {
+  background: white;
+  border-radius: 8px;
+}
+
+.influencer-analysis .ant-card-cover img {
+  transition: transform 0.3s ease;
+}
+
+.influencer-analysis .ant-card:hover .ant-card-cover img {
+  transform: scale(1.05);
+}
+
+.influencer-analysis .ant-modal-body {
+  padding: 24px;
+}
+
+.influencer-analysis .ant-progress-steps-item {
+  width: 20px !important;
+  height: 4px !important;
+}
+
+.influencer-analysis .ant-statistic-content {
+  font-size: 24px;
+}
+
+.influencer-analysis .ant-tag {
+  margin-bottom: 4px;
+}
+
+.influencer-analysis .video-card {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.influencer-analysis .video-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.influencer-analysis .ant-tabs-tab {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.influencer-analysis .ant-tabs-tab-active {
+  color: #1890ff;
+}
+
+.influencer-analysis .engagement-metric {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.influencer-analysis .metric-label {
+  font-size: 12px;
+  color: #8c8c8c;
+  min-width: 80px;
+}
+
+.influencer-analysis .video-duration {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.influencer-analysis .play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.influencer-analysis .play-button-overlay:hover {
+  opacity: 1;
+}
+
+.influencer-analysis .filter-section {
+  background: #f0f2f5;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.influencer-analysis .influencer-avatar {
+  border: 2px solid #f0f0f0;
+}
+
+.influencer-analysis .verified-badge {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+}
+
+.influencer-analysis .growth-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+}
+
+.influencer-analysis .performance-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.influencer-analysis .performance-card .ant-card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .influencer-analysis {
+    padding: 16px;
+  }
+  
+  .influencer-analysis .ant-table-wrapper {
+    overflow-x: auto;
+  }
+  
+  .influencer-analysis .ant-statistic-content {
+    font-size: 20px;
+  }
+}

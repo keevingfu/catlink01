@@ -1,0 +1,167 @@
+.business-insights {
+  padding: 24px;
+}
+
+.business-insights .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.business-insights .page-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.business-insights .ant-card {
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.business-insights .executive-card {
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.business-insights .executive-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.business-insights .executive-card .ant-statistic-title {
+  font-size: 14px;
+  color: #666;
+}
+
+.business-insights .executive-card .ant-statistic-content {
+  margin-bottom: 12px;
+}
+
+.business-insights .executive-card .ant-progress {
+  margin-top: 8px;
+}
+
+.business-insights .ant-tabs-tab {
+  font-weight: 500;
+}
+
+.business-insights .ant-table-wrapper {
+  background: white;
+  border-radius: 8px;
+}
+
+.business-insights .recharts-wrapper {
+  margin: 0 auto;
+}
+
+.business-insights .roi-progress {
+  display: inline-block;
+}
+
+.business-insights .campaign-thumbnail {
+  border-radius: 4px;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.business-insights .campaign-thumbnail:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.business-insights .opportunity-item {
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: all 0.3s;
+}
+
+.business-insights .opportunity-item:hover {
+  background: #f0f0f0;
+  transform: translateX(4px);
+}
+
+.business-insights .priority-high {
+  border-left: 4px solid #ff4d4f;
+}
+
+.business-insights .priority-medium {
+  border-left: 4px solid #faad14;
+}
+
+.business-insights .priority-low {
+  border-left: 4px solid #1890ff;
+}
+
+.business-insights .status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.business-insights .revenue-breakdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.business-insights .revenue-breakdown-item:last-child {
+  border-bottom: none;
+}
+
+.business-insights .segment-card {
+  padding: 16px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  margin-bottom: 12px;
+}
+
+.business-insights .segment-metrics {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.business-insights .regional-summary {
+  padding: 12px;
+  background: #f0f2f5;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.business-insights .quick-win-item {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 16px;
+}
+
+.business-insights .quick-win-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #52c41a;
+}
+
+.business-insights .risk-alert {
+  margin-bottom: 12px;
+}
+
+.business-insights .competitive-radar {
+  margin: 20px 0;
+}
+
+.business-insights .market-share-badge {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1890ff;
+}

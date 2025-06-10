@@ -1,0 +1,15 @@
+.sentiment-analysis {
+  width: 100%;
+}
+
+.keyword-cloud h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+}

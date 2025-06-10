@@ -1,0 +1,98 @@
+.content-intelligence {
+  padding: 24px;
+}
+
+.content-intelligence .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.content-intelligence .page-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.content-intelligence .ant-card {
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.content-intelligence .ant-tabs-tab {
+  font-weight: 500;
+}
+
+.content-intelligence .ant-table-wrapper {
+  background: white;
+  border-radius: 8px;
+}
+
+.content-intelligence .ant-progress-circle {
+  font-size: 14px;
+}
+
+.content-intelligence .ant-tag {
+  border-radius: 4px;
+}
+
+.content-intelligence .recharts-wrapper {
+  margin: 0 auto;
+}
+
+.content-intelligence .video-preview-trigger {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.content-intelligence .video-preview-trigger:hover {
+  transform: scale(1.1);
+  color: #1890ff;
+}
+
+.content-intelligence .insight-card {
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.content-intelligence .insight-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.content-intelligence .metric-highlight {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.content-intelligence .emotional-tone-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.content-intelligence .segment-timeline {
+  position: relative;
+  margin-top: 16px;
+}
+
+.content-intelligence .segment-marker {
+  position: absolute;
+  top: -20px;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #666;
+}
+
+.content-intelligence .optimization-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.content-intelligence .optimization-item:last-child {
+  border-bottom: none;
+}

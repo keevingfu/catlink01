@@ -1,0 +1,163 @@
+.cross-platform {
+  padding: 24px;
+}
+
+.cross-platform .page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.cross-platform .page-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.cross-platform .ant-card {
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.cross-platform .ant-tabs-tab {
+  font-weight: 500;
+}
+
+.cross-platform .ant-table-wrapper {
+  background: white;
+  border-radius: 8px;
+}
+
+.cross-platform .ant-table-thead > tr > th {
+  background: #fafafa;
+  font-weight: 600;
+}
+
+.cross-platform .platform-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+
+.cross-platform .platform-youtube {
+  background: rgba(255, 0, 0, 0.1);
+}
+
+.cross-platform .platform-tiktok {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.cross-platform .platform-instagram {
+  background: rgba(228, 64, 95, 0.1);
+}
+
+.cross-platform .platform-facebook {
+  background: rgba(24, 119, 242, 0.1);
+}
+
+.cross-platform .platform-practice-card {
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.cross-platform .platform-practice-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.cross-platform .heatmap-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.cross-platform .heatmap-cell:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cross-platform .propagation-flow {
+  position: relative;
+  padding: 40px;
+}
+
+.cross-platform .propagation-arrow {
+  position: absolute;
+  stroke: #1890ff;
+  stroke-width: 2;
+  fill: none;
+  marker-end: url(#arrowhead);
+}
+
+.cross-platform .synergy-metric {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.cross-platform .synergy-metric .ant-progress {
+  margin-top: 8px;
+}
+
+.cross-platform .content-thumbnail {
+  border-radius: 4px;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.cross-platform .content-thumbnail:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cross-platform .timeline-item {
+  position: relative;
+  padding-left: 20px;
+}
+
+.cross-platform .timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #1890ff;
+}
+
+.cross-platform .best-time-tag {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.cross-platform .metric-comparison {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.cross-platform .platform-tips {
+  background: #f0f2f5;
+  padding: 12px;
+  border-radius: 4px;
+  margin-top: 12px;
+}
+
+.cross-platform .platform-tips ul {
+  margin: 8px 0 0 0;
+  padding-left: 20px;
+}
+
+.cross-platform .platform-tips li {
+  margin-bottom: 4px;
+  font-size: 13px;
+}
