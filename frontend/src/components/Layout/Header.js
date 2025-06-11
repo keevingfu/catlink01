@@ -1,12 +1,37 @@
 import React from 'react';
-import { Layout, Space, Button, Badge, Avatar, Dropdown, Menu } from 'antd';
+import { Layout, Space, Button, Badge, Avatar, Dropdown, Menu, message } from 'antd';
 import { BellOutlined, SettingOutlined, UserOutlined, LogoutOutlined, QuestionCircleOutlined } from '@ant-design/icons';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { logout } from '../../store/slices/authSlice';
 
 const { Header: AntHeader } = Layout;
 
 const Header = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { user } = useSelector((state) => state.auth);
+
+  const handleMenuClick = async ({ key }) => {
+    if (key === 'logout') {
+      try {
+        await dispatch(logout()).unwrap();
+        message.success('Logged out successfully');
+        navigate('/login');
+      } catch (error) {
+        message.error('Failed to logout');
+      }
+    } else if (key === 'profile') {
+      // Navigate to profile page (to be implemented)
+      message.info('Profile page coming soon');
+    } else if (key === 'settings') {
+      // Navigate to settings page (to be implemented)
+      message.info('Settings page coming soon');
+    }
+  };
+
   const userMenu = (
-    <Menu>
+    <Menu onClick={handleMenuClick}>
       <Menu.Item key="profile" icon={<UserOutlined />}>
         Profile
       </Menu.Item>
@@ -40,8 +65,13 @@ const Header = () => {
         </Badge>
         <Dropdown overlay={userMenu} trigger={['click']}>
           <Space style={{ cursor: 'pointer' }}>
-            <Avatar icon={<UserOutlined />} />
-            <span>Admin User</span>
+            <Avatar 
+              icon={<UserOutlined />} 
+              style={{ backgroundColor: '#1890ff' }}
+            >
+              {user?.username?.charAt(0).toUpperCase()}
+            </Avatar>
+            <span>{user?.username || 'User'}</span>
           </Space>
         </Dropdown>
       </Space>

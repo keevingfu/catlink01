@@ -1,4 +1,5 @@
 import express from 'express';
+import authRoutes from './auth.routes.js';
 import contentRoutes from './content.routes.js';
 import audienceRoutes from './audience.routes.js';
 import campaignRoutes from './campaign.routes.js';
@@ -15,6 +16,7 @@ router.get('/health', (req, res) => {
 });
 
 // API Routes
+router.use('/auth', authRoutes);
 router.use('/content', contentRoutes);
 router.use('/audience', audienceRoutes);
 router.use('/campaigns', campaignRoutes);

@@ -1,5 +1,5 @@
 .video-preview-modal .ant-modal-body {
-  padding: 0;
+  padding: 24px;
 }
 
 .video-container {
@@ -8,4 +8,145 @@
   justify-content: center;
   align-items: center;
   min-height: 400px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Loading state */
+.video-loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  width: 100%;
+  background: #f0f2f5;
+}
+
+.video-loading .ant-spin-text {
+  margin-top: 16px;
+  color: #666;
+}
+
+/* Error state */
+.video-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  width: 100%;
+  padding: 24px;
+  background: #f5f5f5;
+}
+
+.video-error .ant-alert {
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Iframe container for responsive videos */
+.video-iframe-container {
+  width: 100%;
+  background: #000;
+}
+
+/* Platform-specific adjustments */
+.video-iframe-container iframe {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* TikTok videos (vertical) */
+.video-iframe-container[data-platform="tiktok"] {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Instagram embeds */
+.video-iframe-container[data-platform="instagram"] {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .video-preview-modal {
+    max-width: 100vw;
+    margin: 0;
+  }
+  
+  .video-preview-modal .ant-modal {
+    margin: 0;
+  }
+  
+  .video-container {
+    min-height: 250px;
+  }
+  
+  .video-loading,
+  .video-error {
+    min-height: 250px;
+  }
+}
+
+/* ReactPlayer wrapper adjustments */
+.video-container > div {
+  width: 100% !important;
+}
+
+/* Ensure proper aspect ratio for different video types */
+.video-container .react-player__preview {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Debug info styling */
+.video-preview-modal pre {
+  background: #f5f5f5;
+  padding: 8px;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 0;
+  font-family: 'Monaco', 'Consolas', monospace;
+}
+
+/* Statistic cards hover effect */
+.video-preview-modal .ant-statistic {
+  transition: transform 0.2s;
+}
+
+.video-preview-modal .ant-statistic:hover {
+  transform: translateY(-2px);
+}
+
+/* Hashtag styling */
+.video-preview-modal .ant-tag {
+  margin-bottom: 8px;
+}
+
+/* Modal header styling */
+.video-preview-modal .ant-modal-header {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.video-preview-modal .ant-modal-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Descriptions table styling */
+.video-preview-modal .ant-descriptions-item-label {
+  font-weight: 500;
+  color: #666;
+}
+
+.video-preview-modal .ant-descriptions-item-content code {
+  background: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-family: 'Monaco', 'Consolas', monospace;
+  word-break: break-all;
 }

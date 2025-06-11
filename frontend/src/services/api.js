@@ -1,12 +1,13 @@
 import axios from 'axios';
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },
+  withCredentials: true, // Enable cookies for refresh tokens
 });
 
 // Request interceptor
@@ -24,14 +25,53 @@ api.interceptors.request.use(
 // Response interceptor
 api.interceptors.response.use(
   (response) => response,
-  (error) => {
-    if (error.response?.status === 401) {
-      localStorage.removeItem('authToken');
-      window.location.href = '/login';
+  async (error) => {
+    const originalRequest = error.config;
+    
+    if (error.response?.status === 401 && !originalRequest._retry) {
+      if (error.response.data?.code === 'TOKEN_EXPIRED') {
+        originalRequest._retry = true;
+        
+        try {
+          // Try to refresh the token
+          const response = await api.post('/auth/refresh-token');
+          const { accessToken } = response.data;
+          
+          // Update the token
+          localStorage.setItem('authToken', accessToken);
+          
+          // Retry the original request
+          originalRequest.headers.Authorization = `Bearer ${accessToken}`;
+          return api(originalRequest);
+        } catch (refreshError) {
+          // Refresh failed, redirect to login
+          localStorage.removeItem('authToken');
+          localStorage.removeItem('user');
+          window.location.href = '/login';
+          return Promise.reject(refreshError);
+        }
+      } else {
+        // Other 401 errors, redirect to login
+        localStorage.removeItem('authToken');
+        localStorage.removeItem('user');
+        window.location.href = '/login';
+      }
     }
+    
     return Promise.reject(error);
   }
 );
+
+// Auth APIs
+export const authService = {
+  register: (data) => api.post('/auth/register', data),
+  login: (data) => api.post('/auth/login', data),
+  logout: () => api.post('/auth/logout'),
+  refreshToken: () => api.post('/auth/refresh'),
+  getMe: () => api.get('/auth/me'),
+  updateProfile: (data) => api.put('/auth/me', data),
+  changePassword: (data) => api.put('/auth/change-password', data),
+};
 
 // Content APIs
 export const contentAPI = {
@@ -94,6 +134,18 @@ export const dashboardAPI = {
   getInsights: (params) => api.get('/dashboard/insights', { params }),
   getAlerts: () => api.get('/dashboard/alerts'),
   getRecommendations: () => api.get('/dashboard/recommendations'),
+};
+
+// Auth APIs
+export const authAPI = {
+  login: (credentials) => api.post('/auth/login', credentials),
+  register: (userData) => api.post('/auth/register', userData),
+  logout: () => api.post('/auth/logout'),
+  refreshToken: () => api.post('/auth/refresh-token'),
+  getMe: () => api.get('/auth/me'),
+  updateProfile: (profileData) => api.put('/auth/profile', profileData),
+  changePassword: (passwordData) => api.put('/auth/change-password', passwordData),
+  deleteAccount: () => api.delete('/auth/account'),
 };
 
 export default api;

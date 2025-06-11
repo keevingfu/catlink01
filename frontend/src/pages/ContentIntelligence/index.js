@@ -94,13 +94,13 @@ const ContentIntelligence = () => {
     }
   ];
 
-  // Content performance data
+  // Content performance data with real platform URLs
   const contentLibrary = [
     {
       id: 1,
       title: 'Smart Litter Box - Complete Setup Guide',
       thumbnail: '/api/placeholder/120/90',
-      videoUrl: 'https://example.com/video1.mp4',
+      videoUrl: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', // Example YouTube URL
       platform: 'YouTube',
       duration: '3:45',
       views: 125000,
@@ -112,13 +112,17 @@ const ContentIntelligence = () => {
       segments: 12,
       keyMoments: ['0:45', '1:23', '2:15'],
       hashtags: ['smartpet', 'cattech', 'petcare'],
-      description: 'Comprehensive guide on setting up and using the smart litter box with app integration.'
+      description: 'Comprehensive guide on setting up and using the smart litter box with app integration.',
+      roi: 3.2,
+      comments: 1250,
+      shares: 523,
+      creator: 'Catlink Tech Reviews'
     },
     {
       id: 2,
       title: 'Cat Reaction Compilation - First Time Using',
       thumbnail: '/api/placeholder/120/90',
-      videoUrl: 'https://example.com/video2.mp4',
+      videoUrl: 'https://www.tiktok.com/@catlink_official/video/7291824681926483201', // Example TikTok URL
       platform: 'TikTok',
       duration: '0:58',
       views: 450000,
@@ -130,13 +134,17 @@ const ContentIntelligence = () => {
       segments: 6,
       keyMoments: ['0:12', '0:35', '0:48'],
       hashtags: ['catsoftiktok', 'funnycat', 'pettech'],
-      description: 'Hilarious compilation of cats discovering the smart litter box for the first time.'
+      description: 'Hilarious compilation of cats discovering the smart litter box for the first time.',
+      roi: 5.8,
+      comments: 8920,
+      shares: 3245,
+      creator: '@catlink_official'
     },
     {
       id: 3,
       title: 'Health Monitoring Features Explained',
       thumbnail: '/api/placeholder/120/90',
-      videoUrl: 'https://example.com/video3.mp4',
+      videoUrl: 'https://www.instagram.com/reel/CyH6F3xIYtR/', // Example Instagram Reel URL
       platform: 'Instagram',
       duration: '1:30',
       views: 78000,
@@ -148,7 +156,77 @@ const ContentIntelligence = () => {
       segments: 8,
       keyMoments: ['0:20', '0:55', '1:15'],
       hashtags: ['pethealth', 'smarttech', 'catcare'],
-      description: 'Deep dive into the health monitoring capabilities and app features.'
+      description: 'Deep dive into the health monitoring capabilities and app features.',
+      roi: 2.4,
+      comments: 892,
+      shares: 234,
+      creator: 'Catlink Official'
+    },
+    {
+      id: 4,
+      title: 'Unboxing Catlink Premium Series',
+      thumbnail: '/api/placeholder/120/90',
+      videoUrl: 'https://vimeo.com/123456789', // Example Vimeo URL
+      platform: 'Vimeo',
+      duration: '5:23',
+      views: 34000,
+      engagement: 9.2,
+      viralScore: 72,
+      emotionalTone: 'Exciting',
+      visualScore: 92,
+      audioScore: 88,
+      segments: 15,
+      keyMoments: ['1:20', '3:45', '4:50'],
+      hashtags: ['unboxing', 'premium', 'catlink'],
+      description: 'Premium unboxing experience showcasing all features and accessories.',
+      roi: 4.1,
+      comments: 456,
+      shares: 178,
+      creator: 'Pet Tech Reviews'
+    },
+    {
+      id: 5,
+      title: 'Smart Features Demo - Chinese Market',
+      thumbnail: '/api/placeholder/120/90',
+      videoUrl: 'https://www.bilibili.com/video/BV1GJ411x7h7', // Example Bilibili URL
+      platform: 'Bilibili',
+      duration: '8:15',
+      views: 156000,
+      engagement: 13.5,
+      viralScore: 88,
+      emotionalTone: 'Informative',
+      visualScore: 86,
+      audioScore: 90,
+      segments: 20,
+      keyMoments: ['2:30', '5:15', '7:00'],
+      hashtags: ['智能猫砂盆', '宠物科技', 'catlink'],
+      description: 'Detailed demonstration of smart features for the Chinese market.',
+      roi: 6.2,
+      comments: 3456,
+      shares: 1234,
+      creator: 'Catlink China'
+    },
+    {
+      id: 6,
+      title: 'Direct Video Upload - Product Demo',
+      thumbnail: '/api/placeholder/120/90',
+      videoUrl: 'https://cdn.catlink.com/videos/product-demo.mp4', // Example direct video URL
+      platform: 'Direct Video',
+      duration: '2:30',
+      views: 45000,
+      engagement: 7.8,
+      viralScore: 68,
+      emotionalTone: 'Professional',
+      visualScore: 94,
+      audioScore: 91,
+      segments: 10,
+      keyMoments: ['0:30', '1:15', '2:00'],
+      hashtags: ['demo', 'product', 'features'],
+      description: 'Professional product demonstration video hosted on our CDN.',
+      roi: 3.8,
+      comments: 234,
+      shares: 89,
+      creator: 'Catlink Marketing'
     }
   ];
 
