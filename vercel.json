@@ -7,8 +7,5 @@
       "source": "/(.*)",
       "destination": "/"
     }
-  ],
-  "env": {
-    "REACT_APP_API_URL": "@catlink-api-url"
-  }
+  ]
 }
