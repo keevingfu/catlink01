@@ -6,6 +6,11 @@ import { Spin } from 'antd';
 const ProtectedRoute = ({ children, requiredRole = null }) => {
   const { isAuthenticated, user, loading } = useSelector((state) => state.auth);
 
+  // Skip authentication check - directly return children
+  return children;
+  
+  // Original authentication logic (commented out)
+  /*
   if (loading) {
     return (
       <div style={{ 
@@ -28,6 +33,7 @@ const ProtectedRoute = ({ children, requiredRole = null }) => {
   }
 
   return children;
+  */
 };
 
 export default ProtectedRoute;

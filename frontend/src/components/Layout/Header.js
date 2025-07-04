@@ -14,6 +14,9 @@ const Header = () => {
 
   const handleMenuClick = async ({ key }) => {
     if (key === 'logout') {
+      // Logout disabled in demo mode
+      message.info('Logout is disabled in demo mode');
+      /*
       try {
         await dispatch(logout()).unwrap();
         message.success('Logged out successfully');
@@ -21,6 +24,7 @@ const Header = () => {
       } catch (error) {
         message.error('Failed to logout');
       }
+      */
     } else if (key === 'profile') {
       // Navigate to profile page (to be implemented)
       message.info('Profile page coming soon');

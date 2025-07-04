@@ -48,8 +48,8 @@ function AppContent() {
     >
       <Router>
         <Routes>
-          {/* Public routes */}
-          <Route path="/login" element={<Login />} />
+          {/* Public routes - redirect login to dashboard */}
+          <Route path="/login" element={<Navigate to="/dashboard" />} />
           
           {/* Protected routes */}
           <Route

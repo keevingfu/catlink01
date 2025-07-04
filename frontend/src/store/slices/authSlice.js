@@ -5,10 +5,19 @@ import { authAPI } from '../../services/api';
 const user = JSON.parse(localStorage.getItem('user'));
 const token = localStorage.getItem('authToken');
 
+// Default user for demo mode (no login required)
+const defaultUser = {
+  id: 'demo-user',
+  username: 'demo',
+  email: 'demo@catlink.com',
+  fullName: 'Demo User',
+  role: 'user'
+};
+
 const initialState = {
-  user: user || null,
-  token: token || null,
-  isAuthenticated: !!token,
+  user: user || defaultUser,  // Use default user if no user in localStorage
+  token: token || 'demo-token',  // Use demo token
+  isAuthenticated: true,  // Always authenticated in demo mode
   loading: false,
   error: null,
 };
